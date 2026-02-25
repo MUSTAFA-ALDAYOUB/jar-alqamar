@@ -162,3 +162,76 @@ body::before{
   .floatBlob, .shimmerLine{ animation:none !important; }
   .glassCard:hover{ transform:none !important; }
 }
+/* ===== Logo Medal + Buttons ===== */
+.logoMedal{
+  position: relative;
+  width: 240px;
+  height: 240px;
+  border-radius: 999px;
+  padding: 10px;
+  background: linear-gradient(135deg, rgba(255,242,179,.95), rgba(212,175,55,.85), rgba(255,247,204,.95));
+  box-shadow: 0 34px 120px rgba(0,0,0,.55);
+}
+.logoMedal::before{
+  content:"";
+  position:absolute;
+  inset: 10px;
+  border-radius: 999px;
+  background: rgba(6,26,19,.92);
+  border: 1px solid rgba(255,255,255,.10);
+}
+.logoMedal img{
+  position: relative;
+  z-index: 2;
+}
+
+.originTag{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(212,175,55,.25);
+  background: rgba(255,255,255,.06);
+  backdrop-filter: blur(12px);
+  font-weight: 900;
+  color: rgba(255,255,255,.9);
+}
+.originPin{ filter: drop-shadow(0 8px 20px rgba(212,175,55,.25)); }
+
+.btnGold{
+  position: relative;
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  padding: 12px 18px;
+  border-radius: 18px;
+  font-weight: 900;
+  color: #0b1f16;
+  background: linear-gradient(90deg, #fff2b3, #d4af37, #fff7cc, #b8871d);
+  box-shadow: 0 18px 55px rgba(212,175,55,.18);
+  transition: transform .18s ease, filter .18s ease;
+  overflow:hidden;
+}
+.btnGold:hover{ transform: translateY(-2px); filter: brightness(1.05); }
+.btnGold::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  transform: translateX(-130%);
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,.35), transparent);
+  transition: transform .7s ease;
+}
+.btnGold:hover::after{ transform: translateX(130%); }
+.btnArrow{ font-size: 18px; }
+
+.btnGhost{
+  padding: 12px 18px;
+  border-radius: 18px;
+  font-weight: 900;
+  color: rgba(255,255,255,.92);
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+  transition: transform .18s ease, background .18s ease;
+}
+.btnGhost:hover{ transform: translateY(-2px); background: rgba(255,255,255,.10); }
