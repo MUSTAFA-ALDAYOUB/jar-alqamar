@@ -11,7 +11,7 @@ function isBestSeller(p: Product) {
 }
 
 function imgPath(p: Product) {
-  return `/products/${p.category}/${p.id}.jpg`; // إذا صورك PNG غيّرها إلى .png
+  return p.image || `/products/${p.category}/${p.id}.jpg`;
 }
 
 export default function ProductListClient({ products }: { products: Product[] }) {
@@ -107,7 +107,7 @@ function ProductCard({ p }: { p: Product }) {
 
         <div className="mt-4 flex items-center justify-between gap-3">
           <div className="text-xs font-black rounded-full px-3 py-2 border border-white/10 bg-white/5 text-white/75">
-            {typeof p.price === "number" ? `${p.price} ل.س` : "السعر لاحقاً"}
+            {p.price !== undefined ? `${p.price} $` : "السعر لاحقاً $"}
           </div>
           {p.available === false ? (
             <div className="text-xs font-black text-rose-300">غير متوفر</div>
