@@ -6,7 +6,7 @@ export const site = {
   address: "العنوان لاحقاً",
 
   // ضع الرقم لاحقاً بصيغة دولية مثل: 9639xxxxxxx (بدون +)
-  whatsappPhone: "",
+  whatsappPhone: "905368712611",
 
   // ضع رابط الخريطة لاحقاً (Google Maps link)
   mapLink: "",

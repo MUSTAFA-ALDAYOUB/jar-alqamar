@@ -27,13 +27,15 @@ export default function ContactPage() {
             <Card className="p-6">
               <div className="text-white font-black">واتساب</div>
               {site.whatsappPhone ? (
-                <div className="mt-2 text-white/70 font-semibold">{site.whatsappPhone}</div>
+                <>
+                  <div className="mt-2 text-white/70 font-semibold" dir="ltr">+{site.whatsappPhone}</div>
+                  <div className="mt-4 text-white/60 font-semibold">
+                    يمكنك التواصل معنا وتثبيت طلبك عبر الواتساب.
+                  </div>
+                </>
               ) : (
                 <div className="mt-2 text-white/45 font-bold">رقم واتساب لاحقاً</div>
               )}
-              <div className="mt-4 text-white/60 font-semibold">
-                عند توفر الرقم سنفعّل زر الطلب مباشرة.
-              </div>
             </Card>
           </div>
         </Card>
