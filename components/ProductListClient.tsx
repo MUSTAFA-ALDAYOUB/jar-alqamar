@@ -66,7 +66,7 @@ function ProductCard({ p }: { p: Product }) {
   return (
     <Card className="p-5 group">
       <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-white/5">
-        <div className="relative h-40">
+        <div className={`relative ${p.category === "gateau" ? "h-64 sm:h-80" : "h-40"}`}>
           {/* الصورة */}
           <Image
             src={imgPath(p)}
